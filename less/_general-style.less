@@ -8,6 +8,7 @@
 img {
     width: 100%;
     vertical-align: top;
+    user-select: none;
 }
 
 a {
@@ -116,6 +117,7 @@ main {
     line-height: 50px;
     padding: 0 20px;
     outline: none;
+    user-select: none;
 }
 
 /* Breadcrumbs */
@@ -192,16 +194,37 @@ main {
     .sort__block_text {
         display: flex;
         margin-right: 60px;
+        
+        .select__drop_list {
+            &.active {
+                .sort_icon {
+                    transform: translateY(5px) translateX(40px) rotate(135deg);
+                }
+            }
+        }
     }
     
     .sort__block_number {
         display: flex;
         
         .main_input {
-            width: 60px;
+            width: 40px;
+        }
+        
+        .select__drop_list {
+            .drop_list {
+                width: 100px;
+                left: -20px;
+                padding: 0 20px;
+            }
+            
+            &.active {
+                .drop_list {
+                    padding: 50px 20px 30px;
+                }
+            }
         }
     }
-    
     .select__drop_list {
         .drop_list {
             width: 300px;
@@ -212,12 +235,148 @@ main {
     
     .sort_icon {
         right: 0;
-        top: calc(50% -10px);
-        width: 11px;
-        height: 11px;
+        top: calc(50% - 7px);
+        width: 8px;
+        height: 8px;
         border-left: 1px solid #989791;
         border-bottom: 1px solid #989791;
         transform: rotate(-45deg);
     }
+    
+    .select__drop_list {
+        &.active {
+            .sort_icon {
+                transform: translateY(5px) translateX(12px) rotate(135deg);
+            }
+        }
+    }
 }
 
+/* Pagination */
+
+.pagination__wrapper {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+}
+
+.pagination__list {
+    display: flex;
+    font-size: 16px;
+}
+
+.pagination__item {
+    width: 50px;
+    height: 50px;
+    background-color: #f9f9f9;
+    border-radius: 7px;
+    position: relative;
+    margin-right: 20px;
+    color: #a6a6a6;
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+        background-color: #fff;
+        transition: color .4s;
+        
+        &:hover {
+            color: #d00019;
+        }
+        
+        &:hover:active {
+            transform: scale(0.8);
+        }
+    }
+    
+    &.disable {
+        a {
+            background-color: #fbfbfb;
+            color: #cecece;
+            
+             &:hover:active {
+                transform: scale(1);
+            }
+        }
+    }
+    
+    &.prev {
+        margin-right: 40px;
+        
+        a {
+            font-size: 7px;
+            
+            span {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    
+    &.next {
+        margin-right: 0px;
+        margin-left: 40px;
+        
+        a {
+            font-size: 7px;
+            
+            span {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    &.active {
+        color: #579400;
+    }
+    
+    &.dots {
+        background: transparent;
+        cursor: initial;
+        margin: 0px 0px 0px -20px;
+        box-shadow: none;
+        
+        a {
+            background: transparent;
+        }
+    }
+}
+
+/* /Pagination */
+
+
+/* Form application */
+
+.form__aplication {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    color: #555555;
+    
+    .main_input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact_politics {
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 20px;
+        
+        .custome_checkbox {
+            border: 1px solid #555555;
+        }
+    }
+    
+    .main_button {
+        width: 100%;
+    }
+}
