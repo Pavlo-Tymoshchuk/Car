@@ -182,6 +182,10 @@ main {
   padding-left: 85px;
   position: relative;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .main__caption::before {
   content: "";
@@ -880,6 +884,18 @@ header {
 }
 /* /Main Slider */
 /* Search auto */
+.search__auto.taxi__select .main_input {
+  width: 255px;
+}
+.search__auto.taxi__select .drop_list {
+  width: 275px;
+}
+.search__auto.fraight__select .select__radio_wrapper > div:nth-child(2) .select__drop_list .main_input {
+  width: 255px;
+}
+.search__auto.fraight__select .select__radio_wrapper > div:nth-child(2) .select__drop_list .drop_list {
+  width: 275px;
+}
 .search__auto__wrapper {
   margin-top: 35px;
   padding-bottom: 150px;
@@ -920,6 +936,10 @@ header {
   margin-right: 50px;
   cursor: pointer;
   height: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .select__radio label:last-child {
   margin-right: 0px;
@@ -1121,6 +1141,12 @@ header {
   flex-wrap: wrap;
   margin-top: 30px;
 }
+.card__block_list.taxi .img .offers {
+  font-weight: 800;
+}
+.card__block_list.taxi .img .offers.vip {
+  color: #d00019;
+}
 .card__block_item {
   width: 350px;
   padding: 30px;
@@ -1216,6 +1242,19 @@ header {
 .card__block_item .price span {
   font-size: 20px;
 }
+.card__block_item .price .icon-ruble {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.card__block_item .price .icon-ruble span {
+  font-family: 'Segoe UI', sans-serif;
+}
 .card__block_item .price .old_price {
   display: inline-block;
   color: #838383;
@@ -1250,11 +1289,11 @@ header {
 }
 .card__block_item .img .offers {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -10px;
+  top: -10px;
   color: #579400;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 .card__block_item .img .offers.sale {
@@ -1275,7 +1314,7 @@ header {
   width: 385px;
   position: absolute;
   right: -140px;
-  top: 30px;
+  top: 20px;
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
@@ -1351,6 +1390,7 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between;
   font-size: 16px;
+  margin-bottom: 5px;
 }
 .card__block_item .type {
   padding-left: 25px;
@@ -1796,8 +1836,15 @@ header {
   margin-top: 30px;
   margin-bottom: 100px;
 }
+.offers__block_wrapper.taxi .offer__item {
+  cursor: initial;
+}
+.offers__block_wrapper.taxi .offer__item p {
+  width: 180px;
+}
 .offers__block_wrapper.taxi .offer__item span {
-  background: url(../img/taxi-offers-img-1.svg);
+  width: 45px;
+  background: url(../img/taxi-offers-img-1.svg) no-repeat center;
 }
 .offers__block_wrapper.taxi .offer__item:nth-child(2) span {
   background: url(../img/taxi-offers-img-2.svg) no-repeat center;
@@ -1818,7 +1865,7 @@ header {
   background: url(../img/taxi-offers-img-6.svg) no-repeat center;
 }
 .offers__block_wrapper.taxi .offer__list:last-child .offer__item:nth-child(3) span {
-  background: url(../img/taxi-offers-img-7.svg) no-repeat center;
+  background: url(../img/texi-offers-img-7.svg) no-repeat center;
 }
 .offers__block_wrapper.taxi .offer__list:last-child .offer__item:nth-child(4) {
   margin-bottom: 0px;
@@ -1889,7 +1936,7 @@ header {
   z-index: 2;
 }
 .offers__block_wrapper .offer__item p {
-  width: 190px;
+  width: 185px;
 }
 .offers__block_wrapper .offer__item:nth-child(2) span {
   background: url(../img/offers-img-2.svg) no-repeat center;
@@ -1985,6 +2032,12 @@ header {
 .credit__block_info p a {
   color: #579400;
   font-weight: 800;
+}
+/* /Credit block */
+/* Main car block */
+.main_car__block .img {
+  width: 580px;
+  height: 360px;
 }
 /* Footer Social */
 footer {

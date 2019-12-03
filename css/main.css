@@ -35,6 +35,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'Ubuntu';
+  src: url(../fonts/Ubuntu-M.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.ttf');
   font-weight: normal;
@@ -172,6 +178,7 @@ main {
   bottom: -40px;
 }
 .main__caption {
+  font-family: "Ubuntu", sans-serif;
   font-size: 60px;
   line-height: 83px;
   color: #555555;
@@ -1633,6 +1640,343 @@ header {
 .credit__block_info p a {
   color: #579400;
   font-weight: 800;
+}
+/* /Credit block */
+/* Main car block */
+.main_car__block {
+  display: flex;
+  justify-content: space-between;
+}
+.main_car__block .card__block_item {
+  display: flex;
+  width: 640px;
+  height: 370px;
+  margin-right: 0;
+  padding: 0px;
+  position: relative;
+}
+.main_car__block .img {
+  width: 580px;
+  height: 360px;
+  padding-top: 20px;
+}
+.main_car__block .img .offers {
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+.main_car__block .img .sale__list {
+  top: 50px;
+}
+.photo__list {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.photo__list .arrow_photo {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.photo__list .arrow_photo:before {
+  font-size: 8px;
+}
+.photo__list .arrow_photo.prev {
+  top: 5px;
+  transform: translateX(-50%) rotate(180deg);
+}
+.photo__list .arrow_photo.next {
+  bottom: 5px;
+}
+.photo__list .arrow_photo.active {
+  display: block;
+}
+.photo__item {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #cdcdcd;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.photo__item:last-child {
+  margin-bottom: 0px;
+}
+.photo__item.active {
+  border-color: #d00019;
+}
+.photo__item:hover {
+  transform: scale(1.1);
+}
+.color__list {
+  display: flex;
+  position: absolute;
+  left: 60px;
+  bottom: 0px;
+}
+.color__item {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 10px;
+  cursor: pointer;
+}
+.color__item.active span {
+  display: flex;
+}
+.color__item.active:hover {
+  transform: initial;
+}
+.color__item span {
+  display: none;
+  position: relative;
+  bottom: -13px;
+  transform: rotate(180deg);
+}
+.color__item span:before {
+  font-size: 8px;
+  color: #d00019;
+}
+.color__item:first-child {
+  border: 1px solid #cdcdcd;
+}
+.color__item:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s;
+}
+.main_car__info .drop_input {
+  margin-bottom: 25px;
+}
+.main_car__info .main_input {
+  width: 445px;
+}
+.main_car__info .drop_list {
+  width: 465px;
+}
+.main_car__info .info__list {
+  margin-bottom: 20px;
+}
+.main_car__info .info__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.main_car__info .type {
+  padding-left: 25px;
+  color: #838383;
+  position: relative;
+}
+.main_car__info .type span {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main_car__info .description {
+  font-weight: 800;
+}
+.main_car__info .price {
+  font-size: 38px;
+  line-height: 38px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  user-select: none;
+}
+.main_car__info .price span {
+  font-size: 20px;
+}
+.main_car__info .price .icon-ruble {
+  display: inline-flex;
+  align-items: flex-end;
+}
+.main_car__info .price .icon-ruble span {
+  font-family: 'Segoe UI', sans-serif;
+}
+.main_car__info .price .old_price {
+  display: inline-block;
+  color: #838383;
+  font-weight: 300;
+  font-size: 24px;
+  position: relative;
+}
+.main_car__info .price .old_price span:before {
+  font-size: 10px;
+}
+.main_car__info .price .old_price:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  width: 90px;
+  height: 1px;
+  background-color: #d00019;
+  transform: rotate(-10deg);
+}
+.main_car__info .price .new_price {
+  display: inline-block;
+  color: #d00019;
+}
+.main_car__info .price .new_price span:before {
+  color: #d00019;
+}
+.main_car__info .button__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.main_car__info .button__wrapper .main_button {
+  width: 210px;
+}
+.main_car__info .button__wrapper .credit span {
+  border-radius: 5px;
+  background-color: #fff;
+  color: #d00019;
+}
+.main_car__info .button__wrapper .credit span:hover {
+  background-color: #d00019;
+  color: #fff;
+  transition: background-color 0.8s, transform 0.4s, color 0.4s;
+}
+.main_car__info .button__wrapper .credit span:active:hover {
+  transform: scale(0.9);
+  background-color: #7a000f;
+  transition: none;
+}
+.equipment_block {
+  margin-top: 80px;
+}
+.equipment_block .title {
+  font-family: "Ubuntu", sans-serif;
+  color: #555555;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.equipment_block .equipment_block_title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  color: #555555;
+  margin: 20px 0px;
+}
+.quipment_block__item {
+  display: flex;
+  align-items: center;
+  height: 110px;
+  background-color: #fff;
+  padding: 0px 5px 0px 25px;
+}
+.quipment_block__item .name_wrapper {
+  width: 120px;
+  margin: 0px 80px 0px 30px;
+}
+.quipment_block__item .name_wrapper .name {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #579400;
+}
+.quipment_block__item .name_wrapper .price {
+  display: flex;
+  align-items: center;
+  color: #2a2a2a;
+  font-size: 16px;
+  font-weight: 500;
+}
+.quipment_block__item .name_wrapper .price span:before {
+  font-size: 12px;
+  font-weight: 800;
+}
+.quipment_block__item .icon-arrow-search:before {
+  color: #555555;
+  font-size: 8px;
+}
+.quipment_block__item .button__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.quipment_block__item .button__wrapper .equipment_button {
+  width: 200px;
+  height: 45px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  margin-bottom: 5px;
+}
+.quipment_block__item .button__wrapper .equipment_button:last-child {
+  margin-bottom: 0;
+}
+.quipment_block__item .button__wrapper .equipment_button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.4s, color 0.4s;
+}
+.quipment_block__item .button__wrapper .equipment_button.reserve {
+  color: #d00019;
+  border: 1px solid #d00019;
+}
+.quipment_block__item .button__wrapper .equipment_button.reserve:hover span {
+  background-color: #d00019;
+  color: #fff;
+}
+.quipment_block__item .button__wrapper .equipment_button.reserve:hover:active {
+  background-color: #d00019;
+}
+.quipment_block__item .button__wrapper .equipment_button.reserve:hover:active span {
+  background-color: #7a000f;
+  transform: scale(0.95);
+}
+.quipment_block__item .button__wrapper .equipment_button.credit {
+  color: #555555;
+  border: 1px solid #555555;
+}
+.quipment_block__item .button__wrapper .equipment_button.credit:hover span {
+  background-color: #555555;
+  color: #fff;
+}
+.quipment_block__item .button__wrapper .equipment_button.credit:hover:active {
+  background-color: #555;
+}
+.quipment_block__item .button__wrapper .equipment_button.credit:hover:active span {
+  background-color: #434343;
+  transform: scale(0.95);
+}
+.characteristics__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 570px;
+  margin-right: 85px;
+}
+.characteristics__item {
+  display: flex;
+  justify-content: space-between;
+  width: 245px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.characteristics__item:nth-child(3),
+.characteristics__item:nth-child(4) {
+  margin-bottom: 0px;
+}
+.characteristics__item .type {
+  color: #838383;
+}
+.characteristics__item .description {
+  color: #2a2a2a;
+  font-weight: 500;
 }
 /* Footer Social */
 footer {
