@@ -43,10 +43,10 @@
                     <li class="header__item">
                         <a href="#" class="header__link">подбор авто</a>
                     </li>
-                    <li class="header__item active">
+                    <li class="header__item">
                         <a href="#" class="header__link">новые авто</a>
                     </li>
-                    <li class="header__item">
+                    <li class="header__item active">
                         <a href="#" class="header__link">авто с пробегом</a>
                     </li>
                     <li class="header__item">
@@ -238,19 +238,65 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="collaboration">
         <div class="breadcrumbs container">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
                     <a href="#">Главная</a>
                 </li>
                 <li class="breadcrumbs__item active">
-                    <a href="#">Новые авто</a>
+                    <a href="#">Авто с пробегом</a>
                 </li>
             </ul>
         </div>
-        <section class="search__auto container select_interactive">
-            <h3 class="main__caption">Новые авто</h3>
+        <section class="offers__block container">
+            <h3 class="main__caption">покупайте с выгодой!
+                <span>Совместный продукт с AFS.Taxi</span>
+            </h3>
+            <div class="offers__block_wrapper taxi">
+                <ul class="offer__list">
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Широкий выбор автомобилей</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Мы предлагаем не только авто, но и работу</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Каждому покупателю по подарку</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Самые дешёвые кредиты</p>
+                    </div>
+                </ul>
+                <div class="offers__img">
+                    <img src="./img/freight-car.png" alt="Car">
+                </div>
+                <ul class="offer__list">
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Авто сразу у вас на учете</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Услуги механика</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Подменное авто при необходимости</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Особое внимание к каждому клиенту</p>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <section class="search__auto container select_interactive fraight__select">
+            <h3 class="main__caption">Грузовой транспорт</h3>
             <div class="search__auto__wrapper">
                 <div>
                     <div class="select__radio_wrapper">
@@ -273,7 +319,7 @@
                                 <span class="icon-search"></span>
                             </div>
                             <div class="select__drop_list">
-                                <p class="select__title">Тип кузова</p>
+                                <p class="select__title">Тип авто</p>
                                 <div onclick="parentNode.classList.toggle('active')" class="drop_input">
                                     <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
                                     <span class="icon-arrow-search"></span> 
@@ -289,7 +335,7 @@
                         </div>
                         <div>
                             <div class="select__drop_list">
-                                <p class="select__title">Привод</p>
+                                <p class="select__title">Тоннаж</p>
                                 <div onclick="parentNode.classList.toggle('active')" class="drop_input">
                                     <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
                                     <span class="icon-arrow-search"></span> 
@@ -304,6 +350,20 @@
                             </div>
                             <div class="select__drop_list">
                                 <p class="select__title">Коробка передач</p>
+                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                                    <span class="icon-arrow-search"></span> 
+                                </div>
+                                <ul class="drop_list">
+                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                                    <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                                </ul>
+                            </div>
+                            <div class="select__drop_list">
+                                <p class="select__title">Пробег</p>
                                 <div onclick="parentNode.classList.toggle('active')" class="drop_input">
                                     <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
                                     <span class="icon-arrow-search"></span> 
@@ -375,21 +435,6 @@
                 <li class="card__block_item">
                     <div class="img">
                         <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers sale">акция</span>
-                        <ul class="sale__list">
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Специальное предложение на новый Toyota Camry</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">При оформлении в кредит</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 60 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Трейд - Ин</div>
-                            </li>
-                        </ul>
                     </div>
                     <h6 class="title">KIA Rio</h6>
                     <ul class="info__list">
@@ -401,10 +446,13 @@
                             <p class="type"><span class="icon-power"></span> Мощность двигателя</p>
                             <p class="description">123 л.с.</p>
                         </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
+                        </li>
                     </ul>
                     <div class="price">
-                        <p class="old_price">520 000 <span class="icon-ruble"></span></p>
-                        <p class="new_price">  
+                        <p>  
                             <span>от</span>
                             460 000
                             <span class="icon-ruble"></span>
@@ -417,7 +465,6 @@
                 <li class="card__block_item">
                     <div class="img">
                         <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers">Хит</span>
                     </div>
                     <h6 class="title">Hyundai Creta</h6>
                     <ul class="info__list">
@@ -428,6 +475,10 @@
                         <li class="info__item">
                             <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
                             <p class="description">123 л.с.</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
                         </li>
                     </ul>
                     <div class="price">
@@ -442,21 +493,6 @@
                 <li class="card__block_item">
                     <div class="img">
                         <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers sale">акция</span>
-                        <ul class="sale__list">
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Специальное предложение на новый Toyota Camry</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">При оформлении в кредит</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 60 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Трейд - Ин</div>
-                            </li>
-                        </ul>
                     </div>
                     <h6 class="title">Geely Atlas</h6>
                     <ul class="info__list">
@@ -467,6 +503,10 @@
                         <li class="info__item">
                             <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
                             <p class="description">184 л.с.</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
                         </li>
                     </ul>
                     <p class="price">
@@ -493,6 +533,10 @@
                             <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
                             <p class="description">143 л.с.</p>
                         </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
+                        </li>
                     </ul>
                     <p class="price">
                         <span>от</span>
@@ -518,30 +562,9 @@
                             <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
                             <p class="description">122 л.с.</p>
                         </li>
-                    </ul>
-                    <p class="price">
-                        <span>от</span>
-                        460 000
-                        <span class="icon-ruble"></span>
-                    </p>
-                    <a href="" class="main_button">
-                        <span>Подробнее</span>
-                    </a>
-                </li>
-                <li class="card__block_item">
-                    <div class="img">
-                        <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers">Хит</span>
-                    </div>
-                    <h6 class="title">Hyundai Solaris</h6>
-                    <ul class="info__list">
                         <li class="info__item">
-                            <p class="type"> <span class="icon-petrol"></span> Смешаный расход</p>
-                            <p class="description">4,8 л</p>
-                        </li>
-                        <li class="info__item">
-                            <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
-                            <p class="description">123 л.с.</p>
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
                         </li>
                     </ul>
                     <p class="price">
@@ -567,6 +590,39 @@
                         <li class="info__item">
                             <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
                             <p class="description">123 л.с.</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
+                        </li>
+                    </ul>
+                    <p class="price">
+                        <span>от</span>
+                        460 000
+                        <span class="icon-ruble"></span>
+                    </p>
+                    <a href="" class="main_button">
+                        <span>Подробнее</span>
+                    </a>
+                </li>
+                <li class="card__block_item">
+                    <div class="img">
+                        <img src="./img/img-car-kia.png" alt="Kia">
+                        <span class="offers">Хит</span>
+                    </div>
+                    <h6 class="title">Hyundai Solaris</h6>
+                    <ul class="info__list">
+                        <li class="info__item">
+                            <p class="type"> <span class="icon-petrol"></span> Смешаный расход</p>
+                            <p class="description">4,8 л</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
+                            <p class="description">123 л.с.</p>
+                        </li>
+                        <li class="info__item">
+                            <p class="type"><span class="icon-power"></span>Тоннаж</p>
+                            <p class="description">3 т.</p>
                         </li>
                     </ul>
                     <p class="price">
@@ -613,74 +669,6 @@
                 </ul>
             </div>
         </section>
-        <section class="offers__block container">
-            <h3 class="main__caption">Подбор авто</h3>
-            <div class="offers__block_wrapper">
-                <ul class="offer__list">
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Широкий выбор автомобилей</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Цены - ниже среднерыночных</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Каждому покупателю по подарку</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Самые дешёвые кредиты</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                </ul>
-                <div class="offers__img">
-                    <img src="./img/offers-main-img.png" alt="Car">
-                </div>
-                <ul class="offer__list">
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Постоянные скидки и акции</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Государственные программы</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Простой и выгодный Trade-In</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Особое внимание к каждому клиенту</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-        </section>
         <section class="credit__block">
             <h3 class="main__caption container">Кредитование</h3>
             <div class="credit__block__wrapper container">
@@ -721,10 +709,10 @@
                 </div>
             </div>
         </section>
-        <section class="call_back__block" style="background-image:url(./img/call-back-bg.png)">
+        <section class="call_back__block call_back__select" style="background-image:url(./img/call-back-select.png)">
             <div class="call_back__block__wrappper container">
                 <div class="call_back__title">
-                    <h3>Не знаете, какой автомобиль выбрать?</h3>
+                    <h3>Подберем автомобиль под Ваши параметры</h3>
                     <p>Оставьте нам ваш номер телефона прямо сейчас и наш персональный менеджер перезвонит вам в течение 5 минут и поможет с выбором подходящего вам автомобиля!</p>
                 </div>
                 <form action="#" class="call_back__form">
@@ -736,9 +724,6 @@
                             <input type="tel" class="main_input" placeholder="Телефон*">
                         </label>
                     </div>
-                    <div>
-                        <textarea class="main_input" placeholder="Ваши пожелания"></textarea>
-                    </div>
                     <div class="contact_politics">
                         <label>
                             <input type="checkbox" class="checkbox">
@@ -748,7 +733,7 @@
                             <p>Даю согласие на обработку моих <a href="#">персональных данных</a></p>
                         </label>
                         <button class="main_button">
-                            <span>помогите с выбором</span>
+                            <span>Узнать результат</span>
                         </button>
                     </div>
                 </form>

@@ -2,6 +2,7 @@
 
 header {
     user-select: none;
+    position: relative;
 }
 
 .header__top {
@@ -133,4 +134,49 @@ header {
     }
 }
 
+.header_select_car {
+    display: none;
+    width: 100%;
+    border-top: 1px solid #f2f2f2;
+    color: #838383;
+    font-size: 14px;
+}
+
+.mark_car__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto 10px;
+}
+
+.mark_car__item {
+    display: flex;
+    width: 155px;
+    margin-bottom: 15px;
+
+    &:nth-child(7n) {
+        width: 125px;
+    }
+
+    .car_icon {
+        display: inline-block;
+        width: 40px;
+        height: 27px;
+        border: 1px solid rgb(239, 239, 239);
+        border-radius: 7px;
+        background: url(../img/car-icon.png) no-repeat center;
+        margin-right: 10px;
+    }
+}  
+
+.type_car__list {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 20px 15px;
+}
+
+.type_car__wrapper {
+    width: 100%;
+    border-top: 1px solid #f2f2f2;
+}
 /* /Header */

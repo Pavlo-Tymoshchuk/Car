@@ -43,14 +43,14 @@
                     <li class="header__item">
                         <a href="#" class="header__link">подбор авто</a>
                     </li>
-                    <li class="header__item active">
+                    <li class="header__item">
                         <a href="#" class="header__link">новые авто</a>
                     </li>
                     <li class="header__item">
                         <a href="#" class="header__link">авто с пробегом</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">такси</a>
+                        <a href="#" class="header__link active">такси</a>
                     </li>
                     <li class="header__item">
                         <a href="#" class="header__link">Грузовой транспорт</a>
@@ -238,7 +238,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main class="collaboration">
         <div class="breadcrumbs container">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -249,49 +249,62 @@
                 </li>
             </ul>
         </div>
-        <section class="search__auto container select_interactive">
-            <h3 class="main__caption">Новые авто</h3>
+        <section class="offers__block container">
+            <h3 class="main__caption">покупай Такси с выгодой!
+                <span>Совместный продукт с AFS.Taxi</span>
+            </h3>
+            <div class="offers__block_wrapper taxi">
+                <ul class="offer__list">
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Авто сразу у вас на учете</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>КАСКО и ОСАГО под такси</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Предоставляем лицензию такси</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Услуги механика</p>
+                    </div>
+                </ul>
+                <div class="offers__img">
+                    <img src="./img/taxi-car.png" alt="Car">
+                </div>
+                <ul class="offer__list">
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Без первоначального взноса</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Подменное авто, при необходимости</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Осуществляем оклейку авто</p>
+                    </div>
+                    <div class="offer__item">
+                        <span></span>
+                        <p>Медицинские услуги</p>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <section class="search__auto container select_interactive taxi__select">
+            <h3 class="main__caption">подобрать такси</h3>
             <div class="search__auto__wrapper">
                 <div>
                     <div class="select__radio_wrapper">
                         <div>
-                            <div class="select__radio">
-                                <p class="select__title">Поиск по:</p>
-                                <label>
-                                    <input type="radio" name='search_by' checked>
-                                    <span class="custome_radio"></span>
-                                    <span class="type">Марке</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name='search_by'>
-                                    <span class="custome_radio"></span>
-                                    <span  class="type">Модели</span>
-                                </label>
-                            </div>
-                            <div class="search__input">
-                                <input type="text" placeholder="Введите марку" class="main_input">
-                                <span class="icon-search"></span>
-                            </div>
                             <div class="select__drop_list">
                                 <p class="select__title">Тип кузова</p>
                                 <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>900 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Привод</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                                    <input type="text" class="main_input" readonly value="Тип кузова">
                                     <span class="icon-arrow-search"></span> 
                                 </div>
                                 <ul class="drop_list">
@@ -302,6 +315,20 @@
                                     <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
                                 </ul>
                             </div>
+                            <div class="select__drop_list">
+                                    <p class="select__title">Привод</p>
+                                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                                        <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                                        <span class="icon-arrow-search"></span> 
+                                    </div>
+                                    <ul class="drop_list">
+                                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                                        <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                                    </ul>
+                                </div>
                             <div class="select__drop_list">
                                 <p class="select__title">Коробка передач</p>
                                 <div onclick="parentNode.classList.toggle('active')" class="drop_input">
@@ -337,7 +364,6 @@
         </section>
         <section class="card__block container">
             <div class="sort__wrapper">
-                <p class="founds_car">Найдено 35 автомобилей</p>
                 <div class="sort__block">
                     <div class="sort__block_text">
                         <p><span class="icon-sort-arrows"></span> Сортировать:</p>
@@ -355,41 +381,13 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="sort__block_number">
-                        <p><span class="icon-sort-numbers"></span>Показывать по:</p>
-                        <div class="select__drop_list">
-                            <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                <input type="text" class="main_input" readonly value="10">
-                                <span class="sort_icon"></span> 
-                            </div>
-                            <ul class="drop_list">
-                                <li class="drop_item active"><span class="icon-active"></span>30</li>
-                                <li class="drop_item "><span class="icon-active"></span>60</li>
-                                <li class="drop_item"><span class="icon-active"></span>90</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <ul class="card__block_list">
+            <ul class="card__block_list taxi">
                 <li class="card__block_item">
                     <div class="img">
-                        <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers sale">акция</span>
-                        <ul class="sale__list">
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Специальное предложение на новый Toyota Camry</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">При оформлении в кредит</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 60 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Трейд - Ин</div>
-                            </li>
-                        </ul>
+                        <img src="./img/img-car-taxi.png" alt="Taxi">
+                        <span class="offers">Эконом</span>
                     </div>
                     <h6 class="title">KIA Rio</h6>
                     <ul class="info__list">
@@ -403,11 +401,12 @@
                         </li>
                     </ul>
                     <div class="price">
-                        <p class="old_price">520 000 <span class="icon-ruble"></span></p>
-                        <p class="new_price">  
+                        <p>  
                             <span>от</span>
-                            460 000
-                            <span class="icon-ruble"></span>
+                            460
+                            <span class="icon-ruble">
+                                <span>/день</span>
+                            </span>
                         </p>
                     </div>
                     <a href="" class="main_button">
@@ -417,7 +416,7 @@
                 <li class="card__block_item">
                     <div class="img">
                         <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers">Хит</span>
+                        <span class="offers vip">Премиум</span>
                     </div>
                     <h6 class="title">Hyundai Creta</h6>
                     <ul class="info__list">
@@ -442,21 +441,6 @@
                 <li class="card__block_item">
                     <div class="img">
                         <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers sale">акция</span>
-                        <ul class="sale__list">
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Специальное предложение на новый Toyota Camry</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 20 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">При оформлении в кредит</div>
-                            </li>
-                            <li class="sale__item">
-                                <div class="sale_price"><span class="tringle"></span>- 60 000 <span class="icon-ruble"></span></div>
-                                <div class="sale_info">Трейд - Ин</div>
-                            </li>
-                        </ul>
                     </div>
                     <h6 class="title">Geely Atlas</h6>
                     <ul class="info__list">
@@ -553,178 +537,12 @@
                         <span>Подробнее</span>
                     </a>
                 </li>
-                <li class="card__block_item">
-                    <div class="img">
-                        <img src="./img/img-car-kia.png" alt="Kia">
-                        <span class="offers">Хит</span>
-                    </div>
-                    <h6 class="title">Hyundai Solaris</h6>
-                    <ul class="info__list">
-                        <li class="info__item">
-                            <p class="type"> <span class="icon-petrol"></span> Смешаный расход</p>
-                            <p class="description">4,8 л</p>
-                        </li>
-                        <li class="info__item">
-                            <p class="type"><span class="icon-power"></span>Мощность двигателя</p>
-                            <p class="description">123 л.с.</p>
-                        </li>
-                    </ul>
-                    <p class="price">
-                        <span>от</span>
-                        460 000
-                        <span class="icon-ruble"></span>
-                    </p>
-                    <a href="" class="main_button">
-                        <span>Подробнее</span>
-                    </a>
-                </li>
-                <li class="card__block_item show_more">
-                    <span class="icon-show-more-card"></span>
-                    <p>Показать больше</p>
-                </li>
             </ul>
-            <div class="pagination__wrapper">
-                <ul class="pagination__list">
-                    <li class="pagination__item prev disable">
-                        <a href="#">
-                            <span class="icon-arrow-search"></span>
-                        </a>
-                    </li>
-                    <li class="pagination__item active">
-                        <a href="#">1</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a href="#">2</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a href="#">3</a>
-                    </li>
-                    <li class="pagination__item dots">
-                        <a href="#">...</a>
-                    </li>
-                    <li class="pagination__item">
-                        <a href="#">5</a>
-                    </li>
-                    <li class="pagination__item next">
-                        <a href="#">
-                            <span class="icon-arrow-search"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </section>
-        <section class="offers__block container">
-            <h3 class="main__caption">Подбор авто</h3>
-            <div class="offers__block_wrapper">
-                <ul class="offer__list">
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Широкий выбор автомобилей</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Цены - ниже среднерыночных</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Каждому покупателю по подарку</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Самые дешёвые кредиты</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                </ul>
-                <div class="offers__img">
-                    <img src="./img/offers-main-img.png" alt="Car">
-                </div>
-                <ul class="offer__list">
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Постоянные скидки и акции</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Государственные программы</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Простой и выгодный Trade-In</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                    <div class="offer__item" onclick='this.classList.toggle("active")'>
-                        <span></span>
-                        <p>Особое внимание к каждому клиенту</p>
-                        <div class="drop">
-                            <p>На нашем сайте представлены на выбор более 10 000 автомобилей различных марок и на любой кошелёк!Мы поможем вам подобрать авто, идеально соответствующее вашим потребностям</p>
-                        </div>
-                    </div>
-                </ul>
-            </div>
-        </section>
-        <section class="credit__block">
-            <h3 class="main__caption container">Кредитование</h3>
-            <div class="credit__block__wrapper container">
-                <form action="#" class="form__aplication">
-                    <h3 class="credit__form_title">Заявка</h3>
-                    <label>
-                        <input type="text" class="main_input" placeholder="Имя">
-                    </label>
-                    <label>
-                        <input type="tel" class="main_input" placeholder="Телефон*">
-                    </label>
-                    <label>
-                        <input type="text" class="main_input" placeholder="Первоначальный взнос">
-                    </label>
-                    <div class="contact_politics">
-                        <label>
-                            <input type="checkbox" class="checkbox">
-                            <span class="custome_checkbox">
-                                <span class="icon-active"></span>
-                            </span>
-                            <p>Даю согласие на обработку моих <a href="#">персональных данных</a></p>
-                        </label>
-                        <button class="main_button">
-                            <span>узнать результат</span>
-                        </button>
-                    </div>
-                </form>
-                <div class="credit__block_info">
-                    <h4>Заполните онлайн-заявку и узнайте решение в течении <span>24 часов!</span></h4>
-                    <ul class="info__list">
-                        <li class="info__item">24 крупнейших банка-партнера</li>
-                        <li class="info__item">Погашение кредита без комиссии</li>
-                        <li class="info__item">Минимальные пакет документов</li>
-                        <li class="info__item">Ставка по кредиту - до 4,5%</li>
-                        <li class="info__item">50 000 руб скидка при наличии первоначального взноса</li>
-                    </ul>
-                    <p>Подробности по телефону: <a href="tel: 8 (800) 775-35-75">8 (800) 775-35-75</a> (бесплатно по России)</p>
-                </div>
-            </div>
-        </section>
-        <section class="call_back__block" style="background-image:url(./img/call-back-bg.png)">
+        <section class="call_back__block call_back__select" style="background-image:url(./img/call-back-select.png)">
             <div class="call_back__block__wrappper container">
                 <div class="call_back__title">
-                    <h3>Не знаете, какой автомобиль выбрать?</h3>
+                    <h3>Подберем автомобиль под Ваши параметры</h3>
                     <p>Оставьте нам ваш номер телефона прямо сейчас и наш персональный менеджер перезвонит вам в течение 5 минут и поможет с выбором подходящего вам автомобиля!</p>
                 </div>
                 <form action="#" class="call_back__form">
@@ -736,9 +554,6 @@
                             <input type="tel" class="main_input" placeholder="Телефон*">
                         </label>
                     </div>
-                    <div>
-                        <textarea class="main_input" placeholder="Ваши пожелания"></textarea>
-                    </div>
                     <div class="contact_politics">
                         <label>
                             <input type="checkbox" class="checkbox">
@@ -748,7 +563,7 @@
                             <p>Даю согласие на обработку моих <a href="#">персональных данных</a></p>
                         </label>
                         <button class="main_button">
-                            <span>помогите с выбором</span>
+                            <span>Узнать результат</span>
                         </button>
                     </div>
                 </form>

@@ -148,6 +148,34 @@
 
 /* Search auto */
 
+.search__auto {
+    &.taxi__select {
+        .main_input {
+            width: 255px;
+        }
+
+        .drop_list {
+            width: 275px;
+        }
+    }
+
+    &.fraight__select {
+        .select__radio_wrapper {
+            > div:nth-child(2) {
+                .select__drop_list {
+                    .main_input {
+                        width: 255px;
+                    }
+        
+                    .drop_list {
+                        width: 275px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .search__auto__wrapper {
     margin-top: 35px;
     padding-bottom: 150px;
@@ -177,6 +205,7 @@
         margin-right: 50px;
         cursor: pointer;
         height: 50px;
+        user-select: none;
         
         &:last-child {
             margin-right: 0px;
@@ -416,6 +445,18 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+
+    &.taxi {
+        .img {
+            .offers {
+                font-weight: 800;
+
+                &.vip {
+                    color: #d00019;
+                }
+            }
+        }   
+    }
 }
 
 .card__block_item {
@@ -429,6 +470,12 @@
     
     &:nth-child(3n) {
         margin-right: 0px;
+
+        .img {
+            .sale__list {
+                right: -30px;
+            }
+        }
     }
     
     &.show_more {
@@ -488,10 +535,56 @@
         line-height: 38px;
         font-weight: 300;
         margin-bottom: 20px;
+        user-select: none;
         
         span {
             font-size: 20px;
         }
+
+        .icon-ruble {
+            display: inline-flex;
+            align-items: flex-end;
+
+            span {
+                font-family: 'Segoe UI', sans-serif;
+            }
+        }
+
+        .old_price {
+            display: inline-block;
+            color: #838383;
+            font-weight: 300;
+            font-size: 24px;
+            position: relative;
+
+            span {
+                &:before {
+                    font-size: 10px;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 20px;
+                width: 90px;
+                height: 1px;
+                background-color: #d00019;
+                transform: rotate(-10deg);
+            }
+        }
+
+        .new_price {
+            display: inline-block;
+            color: #d00019;
+            span {
+                &:before {
+                    color: #d00019;
+                }
+            }
+        }
+
     }
     
     .img {
@@ -500,15 +593,90 @@
         
         .offers {
             position: absolute;
-            right: 0;
-            top: 0;
+            right: -10px;
+            top: -10px;
             color: #579400;
             font-weight: 900;
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
+
+            &.sale {
+                color: #d00019;
+                text-decoration: underline;
+                cursor: pointer;
+                transition: color .4s;
+
+                &:hover {
+                    color: #555555;
+
+                    + .sale__list {
+                        opacity: 1;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+
+        .sale__list {
+            width: 385px;
+            position: absolute;
+            right: -140px;
+            top: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            z-index: -1;
+            padding: 30px 30px 30px 0px;
+            transition: opacity .4s;
+        }
+
+        .sale__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            .sale_price {
+                font-size: 18px;
+                font-weight: 800;
+                width: 140px;
+                color: #fff;
+                background-color: #d00019;
+                text-align: center;
+                position: relative;
+                height: 32px;
+                line-height: 32px;
+
+                .tringle {
+                    position: absolute;
+                    right: -32px;
+                    top: 0px;
+                    display: block;
+                    width: 0px;
+                    height: 0px;
+                    border: 16px solid transparent;
+                    border-left-color:#d00019;
+                }
+                span {
+                    &:before {
+                        color: #fff;
+                        font-weight: 800;
+                    }
+                }
+            }
+
+            .sale_info {
+                width: 180px;
+                color: #555555;
+                font-size: 14px;
+            }
         }
     }
-    
+      
     .title {
         font-size: 22px;
         font-weight: 800;
@@ -523,6 +691,7 @@
         display: flex;
         justify-content: space-between;
         font-size: 16px;
+        margin-bottom: 5px;
     }
     
     .type {
@@ -790,6 +959,36 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    &.call_back__select {
+        .call_back__info {
+            height: 100%;
+            width: 540px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 35px;
+        }
+
+        .contact_politics {
+            height: 100%;
+            width: 530px;
+            flex-direction: row;
+
+            label {
+                width: 270px;
+            }
+
+            .main_button {
+                width: 255px;
+            }
+        }
+        
+        .call_back__title {
+            h3 {
+                max-width: 930px;
+            }
+        }
+    }
 }
 
 .call_back__form {
@@ -800,18 +999,19 @@
     }
 }
 
-.call_back__title {
-    max-width: 760px;
-    width: 100%;
-    
+.call_back__title {    
     h3 {
         font-family: "Ubuntu", sans-serif;
         font-size: 56px;
         line-height: 65px;
         text-transform: uppercase;
+        max-width: 760px;
+        width: 100%;
     }
     
     p {
+        max-width: 760px;
+        width: 100%;
         font-size: 16px;
         line-height: 24px;
     }
@@ -939,6 +1139,71 @@
     align-items: center;
     margin-top: 30px;
     margin-bottom: 100px;
+
+    &.taxi {
+        .offer__item {
+            cursor: initial;
+
+            p {
+                width: 180px;
+            }
+
+            span {
+                width: 45px;
+                background: url(../img/taxi-offers-img-1.svg) no-repeat center;
+            }
+            &:nth-child(2) {
+                span {
+                    background: url(../img/taxi-offers-img-2.svg) no-repeat center;
+                }
+            }
+            
+            &:nth-child(3) {
+                span {
+                    background: url(../img/taxi-offers-img-3.svg) no-repeat center;
+                }
+            }
+            &:nth-child(4) {
+                margin-bottom: 0px;
+                
+                span {
+                    background: url(../img/taxi-offers-img-4.svg) no-repeat center;
+                }
+            }
+        }
+
+        .offer__list {
+            &:last-child {
+                .offer__item {
+                    &:nth-child(1) {
+                        span {
+                            background: url(../img/taxi-offers-img-5.svg) no-repeat center;
+                        }
+                    }
+                    
+                    &:nth-child(2) {
+                        span {
+                            background: url(../img/taxi-offers-img-6.svg) no-repeat center;
+                        }
+                    }
+                    
+                    &:nth-child(3) {
+                        span {
+                            background: url(../img/texi-offers-img-7.svg) no-repeat center;
+                        }
+                    }
+                    
+                    &:nth-child(4) {
+                        margin-bottom: 0px;
+                        
+                        span {
+                            background: url(../img/taxi-offers-img-8.svg) no-repeat center;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     .offers__img {
         width: 520px;
@@ -998,7 +1263,7 @@
         }
         
         p {
-            width: 190px;
+            width: 185px;
         }
         
         &:nth-child(2) {

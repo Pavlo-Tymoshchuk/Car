@@ -44,6 +44,25 @@ main {
     margin: 0 auto;
 }
 
+.collaboration {
+    .main__caption {
+        color: #5b970d;
+        position: relative;
+
+        &::before {
+            background-color: #d00019;
+        }
+
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: initial;
+            position: absolute;
+            left: 87px;
+            bottom: -40px;
+        }
+    }
+}
 .main__caption {
     font-size: 60px;
     line-height: 83px;
@@ -51,6 +70,7 @@ main {
     padding-left: 85px;
     position: relative;
     text-transform: uppercase;
+    user-select: none;
     
     &::before {
         content: "";
