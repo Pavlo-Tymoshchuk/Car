@@ -1136,6 +1136,10 @@
 
 /* Offers block */
 
+.offers__block {
+    margin-top: 130px;
+}
+
 .offers__block_wrapper {
     display: flex;
     justify-content: space-between;
@@ -1336,6 +1340,13 @@
 .credit__block__wrapper {
     display: flex;
     margin-top: 35px;
+    position: relative;
+}
+
+.main_car_img {
+    position: absolute;
+    right: 0px;
+    top: -40px;
 }
 
 .credit__form_title {
@@ -1348,6 +1359,7 @@
 .credit__block_info {
     width: 440px;
     margin: 65px 0 0 75px;
+    z-index: 2;
     
     h4 {
         font-size: 20px;
@@ -1988,32 +2000,6 @@
 
 .reviews__block {
     margin-top: 130px;
-    
-    .title_wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    
-    .name_car {
-        color: #959595;
-        font-size: 14px;
-        margin-bottom: 10px;
-        
-        span {
-            color: #579400;
-            font-weight: 800;
-        }
-    }
-    
-    .reviews_text {
-        font-size: 14px;
-        line-height: 20px;
-        height: 80px;
-        max-height: 100%;
-        overflow: hidden;
-    }
 }
 
 .reciews__item_footer {
@@ -2057,6 +2043,50 @@
     margin-right: 30px;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
     
+    .review__img {
+        height: 215px;
+        
+        img {
+            object-fit: contain;
+            height: 100%;
+        }
+        
+        &.video {
+            height: 295px;
+            
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    
+    .title_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 75px;
+    }
+    
+    .name_car {
+        color: #959595;
+        font-size: 14px;
+        margin-bottom: 10px;
+        
+        span {
+            color: #579400;
+            font-weight: 800;
+        }
+    }
+    
+    .reviews_text {
+        font-size: 14px;
+        line-height: 20px;
+        height: 80px;
+        max-height: 100%;
+        overflow: hidden;
+    }
+    
     &.active {
         .reviews_text {
             height: 100%;
@@ -2080,8 +2110,6 @@
 }
 
 .main_car__form {
-    background-repeat: no-repeat;
-    background-position: 750px 50px;
     padding-bottom: 120px;
     margin-top: 130px;
     
@@ -2473,6 +2501,23 @@
 /* Testimonials */
 
 .testimonials {
+    
+    .reviews__block {
+        margin-top: 40px;
+    }
+    
+    .reviews__list {
+        flex-wrap: wrap;
+    }
+    
+    .reviews__item {
+        margin-bottom: 30px;
+        
+        &:nth-child(2n) {
+            margin-right: 0px;
+        }
+    }
+    
     .button__wrapper {
         display: flex;
         justify-content: center;
@@ -2525,9 +2570,141 @@
     font-weight: 800;
     text-transform: uppercase;
     border-bottom: 1px solid #dadada;
+    margin-top: 40px;
     
     p {
         width: 540px;
         text-align: center;
+        cursor: pointer;
+    }
+    
+    .active {
+        color: #555555;
+        position: relative;
+        
+        &:before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: #d00019;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+/* /Testimonials */
+
+/* Contact */
+
+.contact_main {
+    padding-bottom: 0px;
+}
+
+.contact__list {
+    display: flex;
+    margin: 40px 0px;
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+    margin-right: 90px;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+    
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(235, 235, 235);
+        margin-right: 15px;
+        
+        &::before {
+            font-size: 25px;
+        }
+    }
+    
+    .info {
+        font-size: 14px;
+        span {
+            color: #8d8d8d
+        }
+        
+        p {
+            font-size: 16px;
+            color: #292929;
+        }
+    }
+}
+
+.contact__info {
+    display: flex;
+    justify-content: space-between;
+    
+    .wrapper {
+        width: 610px;
+        
+        p {
+            color: #8d8d8d;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.contact__info_title {
+    color: #555555;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.contact__info_sub {
+    color: #555555;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.contact_call_back {
+    .form__aplication  {
+        width: 100%;
+    }
+    
+    .custome_checkbox {
+        background-color: #f7f7f7;
+    }
+    
+    .main_input {
+        width: 445px;
+    }
+    
+    textarea.main_input {
+        height: 80px;
+        resize: none;
+    }
+}
+
+.contact_map {
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    margin-top: 55px;
+    
+    iframe {
+        height: calc(100% + 400px);
+        width: calc(100% + 600px);
+        margin-left: -300px;
+        margin-top: -200px;
     }
 }

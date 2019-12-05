@@ -29,10 +29,26 @@ header {
     &:last-child {
         margin-right: 0px;
     }
+    
+    &.active {
+        .header__top__link {
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 1px;
+                background-color: #d00019;
+            }
+        }
+    }
 }
 
 .header__top__link {
     transition: color .4s;
+    position: relative;
     
     &:hover {
         color: #d2021b;
@@ -99,7 +115,6 @@ header {
                 background-color: #d00019;
             }
         }
-        
     }
 }
 

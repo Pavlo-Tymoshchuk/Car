@@ -61,6 +61,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-contact-time:before {
+  content: "\e914";
+}
+.icon-contact-place:before {
+  content: "\e915";
+}
+.icon-contact-phone:before {
+  content: "\e916";
+}
 .icon-close:before {
   content: "\e913";
   color: #b7b7b7;
@@ -176,6 +185,9 @@ main {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.collaboration .offers__block {
+  margin-top: 0px;
 }
 .collaboration .main__caption {
   color: #5b970d;
@@ -476,7 +488,7 @@ main {
   top: 110px;
   z-index: 3;
 }
-.push_notification__item {
+.noty_theme__push_notification__item {
   width: 420px;
   margin-bottom: 10px;
   background-color: #5baa3a;
@@ -484,10 +496,10 @@ main {
   padding: 25px 20px;
   position: relative;
 }
-.push_notification__item.error {
+.noty_theme__push_notification__item.noty_type__error {
   background-color: #d40000;
 }
-.push_notification__item .close {
+.noty_theme__push_notification__item .close {
   position: absolute;
   right: 10px;
   top: 20px;
@@ -495,8 +507,8 @@ main {
   height: 15px;
   cursor: pointer;
 }
-.push_notification__item .close:after,
-.push_notification__item .close:before {
+.noty_theme__push_notification__item .close:after,
+.noty_theme__push_notification__item .close:before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -506,13 +518,43 @@ main {
   height: 2px;
   background-color: #fff;
 }
-.push_notification__item .close:after {
+.noty_theme__push_notification__item .close:after {
   transform: rotate(45deg);
 }
-.push_notification__item .close:before {
+.noty_theme__push_notification__item .close:before {
   transform: rotate(-45deg);
 }
 /* /Notification */
+.politics {
+  background: #fff;
+  max-width: 940px;
+  margin: 1em auto;
+  border: 1px solid #ccc;
+  padding: 1em 2%;
+}
+.politics h1 {
+  color: #579400;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  line-height: 48px;
+}
+.politics p {
+  color: #333;
+  padding: 0 0 0.5em;
+  font: 1em Arial;
+  line-height: 150%;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+.politics h2 {
+  color: #444;
+  font-size: 1.8em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  text-align: center;
+}
 /* Header */
 header {
   user-select: none;
@@ -540,8 +582,19 @@ header {
 .header__top_item:last-child {
   margin-right: 0px;
 }
+.header__top_item.active .header__top__link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 1px;
+  background-color: #d00019;
+}
 .header__top__link {
   transition: color 0.4s;
+  position: relative;
 }
 .header__top__link:hover {
   color: #d2021b;
@@ -1551,6 +1604,9 @@ header {
 }
 /* /Seo block */
 /* Offers block */
+.offers__block {
+  margin-top: 130px;
+}
 .offers__block_wrapper {
   display: flex;
   justify-content: space-between;
@@ -1684,6 +1740,12 @@ header {
 .credit__block__wrapper {
   display: flex;
   margin-top: 35px;
+  position: relative;
+}
+.main_car_img {
+  position: absolute;
+  right: 0px;
+  top: -40px;
 }
 .credit__form_title {
   color: #555555;
@@ -1694,6 +1756,7 @@ header {
 .credit__block_info {
   width: 440px;
   margin: 65px 0 0 75px;
+  z-index: 2;
 }
 .credit__block_info h4 {
   font-size: 20px;
@@ -2207,28 +2270,6 @@ header {
 .reviews__block {
   margin-top: 130px;
 }
-.reviews__block .title_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.reviews__block .name_car {
-  color: #959595;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.reviews__block .name_car span {
-  color: #579400;
-  font-weight: 800;
-}
-.reviews__block .reviews_text {
-  font-size: 14px;
-  line-height: 20px;
-  height: 80px;
-  max-height: 100%;
-  overflow: hidden;
-}
 .reciews__item_footer {
   display: flex;
   align-items: flex-end;
@@ -2266,6 +2307,42 @@ header {
   margin-right: 30px;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
 }
+.reviews__item .review__img {
+  height: 215px;
+}
+.reviews__item .review__img img {
+  object-fit: contain;
+  height: 100%;
+}
+.reviews__item .review__img.video {
+  height: 295px;
+}
+.reviews__item .review__img.video iframe {
+  width: 100%;
+  height: 100%;
+}
+.reviews__item .title_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+.reviews__item .name_car {
+  color: #959595;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.reviews__item .name_car span {
+  color: #579400;
+  font-weight: 800;
+}
+.reviews__item .reviews_text {
+  font-size: 14px;
+  line-height: 20px;
+  height: 80px;
+  max-height: 100%;
+  overflow: hidden;
+}
 .reviews__item.active .reviews_text {
   height: 100%;
 }
@@ -2282,8 +2359,6 @@ header {
   cursor: pointer;
 }
 .main_car__form {
-  background-repeat: no-repeat;
-  background-position: 750px 50px;
   padding-bottom: 120px;
   margin-top: 130px;
 }
@@ -2602,6 +2677,18 @@ header {
 }
 /* /Installment-plan */
 /* Testimonials */
+.testimonials .reviews__block {
+  margin-top: 40px;
+}
+.testimonials .reviews__list {
+  flex-wrap: wrap;
+}
+.testimonials .reviews__item {
+  margin-bottom: 30px;
+}
+.testimonials .reviews__item:nth-child(2n) {
+  margin-right: 0px;
+}
 .testimonials .button__wrapper {
   display: flex;
   justify-content: center;
@@ -2647,10 +2734,117 @@ header {
   font-weight: 800;
   text-transform: uppercase;
   border-bottom: 1px solid #dadada;
+  margin-top: 40px;
 }
 .select_testimonials p {
   width: 540px;
   text-align: center;
+  cursor: pointer;
+}
+.select_testimonials .active {
+  color: #555555;
+  position: relative;
+}
+.select_testimonials .active:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: #d00019;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* /Testimonials */
+/* Contact */
+.contact_main {
+  padding-bottom: 0px;
+}
+.contact__list {
+  display: flex;
+  margin: 40px 0px;
+}
+.contact__item {
+  display: flex;
+  align-items: center;
+  margin-right: 90px;
+}
+.contact__item:last-child {
+  margin-right: 0px;
+}
+.contact__item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ebebeb;
+  margin-right: 15px;
+}
+.contact__item .icon::before {
+  font-size: 25px;
+}
+.contact__item .info {
+  font-size: 14px;
+}
+.contact__item .info span {
+  color: #8d8d8d;
+}
+.contact__item .info p {
+  font-size: 16px;
+  color: #292929;
+}
+.contact__info {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__info .wrapper {
+  width: 610px;
+}
+.contact__info .wrapper p {
+  color: #8d8d8d;
+  font-size: 16px;
+  line-height: 24px;
+}
+.contact__info_title {
+  color: #555555;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+.contact__info_sub {
+  color: #555555;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.contact_call_back .form__aplication {
+  width: 100%;
+}
+.contact_call_back .custome_checkbox {
+  background-color: #f7f7f7;
+}
+.contact_call_back .main_input {
+  width: 445px;
+}
+.contact_call_back textarea.main_input {
+  height: 80px;
+  resize: none;
+}
+.contact_map {
+  width: 100%;
+  height: 470px;
+  overflow: hidden;
+  margin-top: 55px;
+}
+.contact_map iframe {
+  height: calc(100% + 400px);
+  width: calc(100% + 600px);
+  margin-left: -300px;
+  margin-top: -200px;
 }
 /* Footer Social */
 footer {
@@ -2887,6 +3081,8 @@ footer {
   max-width: 480px;
   background-color: #f7f7f7;
   width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
 }
 .popup .contact_politics {
   margin-bottom: 0px;
@@ -2906,6 +3102,94 @@ footer {
   right: 15px;
   top: 15px;
   cursor: pointer;
+}
+.popup.popup_review {
+  max-width: 600px;
+  background-color: #fff;
+  padding: 50px;
+}
+.popup.popup_review .reviews__item {
+  width: 100%;
+  background: none;
+  padding: 0px;
+  box-shadow: none;
+}
+.popup.popup_review .reviews_text {
+  margin-bottom: 15px;
+}
+.popup.popup_review_add {
+  font-size: 16px;
+  color: #555555;
+}
+.popup.popup_review_add .contact_politics .custome_checkbox {
+  background-color: #f7f7f7;
+}
+.popup.popup_review_add .caption {
+  text-transform: initial;
+}
+.popup.popup_review_add .header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.popup.popup_review_add .header_wrapper h6 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.popup.popup_review_add textarea.main_input {
+  height: 90px;
+  resize: none;
+}
+.popup.popup_review_add .add_photo {
+  position: relative;
+  margin-bottom: 15px;
+}
+.popup.popup_review_add .add_photo label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.popup.popup_review_add .add_photo label:hover .custome_button {
+  transform: rotate(90deg);
+  background-color: #ccc;
+}
+.popup.popup_review_add .add_photo label:hover .custome_button:before,
+.popup.popup_review_add .add_photo label:hover .custome_button:after {
+  background-color: #fff;
+}
+.popup.popup_review_add .add_photo p {
+  margin-left: 10px;
+}
+.popup.popup_review_add .add_photo input {
+  font-size: 0px;
+  width: 0px;
+  height: 0px;
+  margin: -1px;
+  position: absolute;
+}
+.popup.popup_review_add .add_photo .custome_button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.4s, background-color 0.1s;
+}
+.popup.popup_review_add .add_photo .custome_button:before,
+.popup.popup_review_add .add_photo .custome_button:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #737373;
+}
+.popup.popup_review_add .add_photo .custome_button:after {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 .popup_reservation .name {
   color: #302f22;

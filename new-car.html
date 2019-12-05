@@ -36,11 +36,11 @@
         </nav>
         <section class="push_notification">
             <ul class="push_notification__list">
-                <li class="push_notification__item">
+                <li class="noty_theme__push_notification__item">
                     <p class="text">Вам назначина онлайн консультация с хирургом 20.01.2019 на 17:00</p>
                     <span class="close"></span>
                 </li>
-                <li class="push_notification__item error">
+                <li class="noty_theme__push_notification__item noty_type__error">
                     <p class="text">Неизвесная ошибка, повторите запрос позже</p>
                     <span class="close"></span>
                 </li>
@@ -1468,22 +1468,26 @@
             <div class="credit__block__wrapper container">
                 <form action="#" class="form__aplication">
                     <h3 class="credit__form_title">Заявка</h3>
-                    <label>
-                        <input type="text" class="main_input" placeholder="Имя">
+                    <label class="form-label">
+                        <input type="text" class="main_input form-label__input is-invalid" placeholder="Имя">
+                        <div class="alert alert-danger"></div>
                     </label>
-                    <label>
-                        <input type="tel" class="main_input" placeholder="Телефон*">
+                    <label class="form-label">
+                        <input type="tel" class="main_input form-label__input is-invalid" placeholder="Телефон*">
+                        <div class="alert alert-danger"></div>
                     </label>
-                    <label>
-                        <input type="text" class="main_input" placeholder="Первоначальный взнос">
+                    <label class="form-label">
+                        <input type="text" class="main_input form-label__input is-invalid" placeholder="Первоначальный взнос">
+                        <div class="alert alert-danger"></div>
                     </label>
                     <div class="contact_politics">
-                        <label>
-                            <input type="checkbox" class="checkbox">
+                        <label class="form-label">
+                            <input type="checkbox" class="checkbox form-label__input is-invalid">
                             <span class="custome_checkbox">
                                 <span class="icon-active"></span>
                             </span>
                             <p>Даю согласие на обработку моих <a href="#">персональных данных</a></p>
+                            <div class="alert alert-danger"></div>
                         </label>
                         <button class="main_button">
                             <span>узнать результат</span>
