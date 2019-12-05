@@ -401,3 +401,70 @@ main {
         width: 100%;
     }
 }
+
+
+.form-label {
+    position: relative;
+    
+    .alert-danger {
+        position: absolute;
+        left: 5px;
+        bottom: -20px;
+        color: #d00019;
+        font-size: 12px;
+        user-select: none;
+    }
+}
+
+
+/* Notification */
+
+.push_notification {
+    position: fixed;
+    right: 0px;
+    top: 110px;
+    z-index: 3;
+}
+
+.push_notification__item {
+    width: 420px;
+    margin-bottom: 10px;
+    background-color: #5baa3a;
+    color: #fff;
+    padding: 25px 20px;
+    position: relative;
+}
+
+.push_notification__item.error {
+    background-color: #d40000;
+}
+.push_notification__item .close {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.push_notification__item .close:after,
+.push_notification__item .close:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+}
+
+.push_notification__item .close:after {
+    transform: rotate(45deg);
+}
+
+.push_notification__item .close:before {
+    transform: rotate(-45deg);
+}
+
+/* /Notification */
