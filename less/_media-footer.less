@@ -1,0 +1,227 @@
+@media (max-width: 1140px) {
+    .footer__navigation  {
+        > div {
+            flex-wrap: wrap;
+            height: initial;
+        }
+    }
+    
+    .footer__navigation {
+        .footer__item {
+            width: 50%;
+            
+            &:nth-child(2) {
+                width: 50%;
+            }
+            
+            &:last-child {
+                width: 100%;
+                margin-top: 25px;
+                
+                .footer__info {
+                    a { 
+                        width: 25%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer__info {
+        line-height: 26px;
+    }
+    
+    .footer__address {
+        .footer__title {
+            span {
+                display: none;
+            }
+        }
+        
+        .contact__item {
+            max-width: 160px;
+            
+            p {
+                margin-left: 0px;
+            }
+        }
+    }
+    
+    .footer__logo {
+        width: 130px;
+        height: 60px;
+    }
+    
+    .footer__select_car {
+        max-height: 70px;
+        overflow: hidden;
+        padding: 20px 0px;
+        
+        &.active {
+            max-height: 100%;
+            
+            .footer_mobile__navigation {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        
+        .footer__select__item {
+            width: 33%;
+        }
+    }
+    
+    .footer_mobile__navigation {
+        display: block;
+        color: #ffffff;
+        font-size: 16px;
+        position: relative;
+        margin-bottom: 30px;
+        
+        span {
+            position: absolute;
+            right: 0px;
+            display: flex;
+            top: calc(50% - 1px);
+            transition: transform .4s;
+            
+            &:before {
+                font-size: 7px;
+            }
+        }
+    }
+    
+    .footer__select_type_car {
+        max-height: 70px;
+        overflow: hidden;
+        padding: 20px 0px;
+        
+        &.active {
+            max-height: 100%;
+            
+            .footer_mobile__navigation {
+                span {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        
+        .footer__select__item {
+            width: 33%;
+        }
+        
+        .footer__info {
+            a {
+                margin-right: 5px;
+            }
+        }
+    }
+    
+    .footer__copyright {
+        padding: 25px 0px;
+    }
+    
+    .copyright__list {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    .footer__social_wrapper {
+        height: initial;
+        padding: 20px 0px;
+        
+        > div {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+    
+    .footer__social_item {
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+    
+    .footer__contact_phone {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    
+    .footer__navigation {
+        .footer__item {
+            width: 100%;
+            margin-bottom: 20px;
+            
+            &:nth-child(2) {
+                width: 100%;
+            }
+            
+            &:last-child {
+                margin: 0px;
+                
+                .footer__info {
+                    a {
+                        width: 180px;
+                        
+                        &:nth-child(2n) {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .footer__info {
+            a {
+                width: 180px;
+                
+                &:nth-child(2n) {
+                    width: 150px;
+                }
+            }
+        }
+    }
+    
+    .footer__address {
+        > div {
+            flex-wrap: wrap;
+        }
+        
+        .contact__item {
+           margin-bottom: 20px;
+           
+           &:nth-child(n+3) {
+               margin-bottom: 0px;
+           }
+        }
+    }
+    
+    .footer__select_car {
+        .footer__select__item {
+            width: 48%;
+            margin-bottom: 15px;
+        }
+    }
+    
+    .footer__select_type_car {
+        .footer__select__item {
+            width: 48%;
+        }
+    }
+    
+    .copyright__list {
+        flex-direction: column;
+        align-items: center;
+    } 
+    
+    .copyright__item {
+        margin-bottom: 15px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}

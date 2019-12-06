@@ -5,6 +5,10 @@ header {
     position: relative;
 }
 
+.burger_menu {
+    display: none;
+}
+
 .header__top {
     width: 100%;
     background-color: #f9f9f9;
@@ -84,6 +88,10 @@ header {
 
 .header__list {
     display: flex;
+    
+    &.mobile {
+        display: none;
+    }
 }
 
 .header__item {

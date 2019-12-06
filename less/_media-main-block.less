@@ -1,0 +1,571 @@
+/* Main slider */
+
+@media (max-width: 1260px) {
+    .slider__caption {
+       margin-left: 85px;
+    }
+}
+
+/* /Main slider */
+@media (max-width: 1140px) {
+    
+    /* Main slider */
+    
+    .slider__caption {
+        font-size: 41px;
+        line-height: 80px;
+        max-width: 510px;
+        line-height: 65px;
+        
+        span {
+            padding: 5px 0px 10px;
+        }
+    }
+    
+    /* /Main slider */
+     
+    /* Main form */
+    
+    .main__form {
+        .select__radio_wrapper {
+            .main_button {
+                display: none;
+            }
+        }
+        
+        .search__input {
+            .main_input {
+                width: 435px;
+            }
+        } 
+        
+        .main_button {
+            &.mobile {
+                display: block;
+                margin: 30px auto 0px;
+            }
+        }
+    } 
+    
+    .search__auto__wrapper {
+        padding-bottom: 90px;
+    }
+    
+    /* /Main form */
+    
+    /* Car card */
+    
+    .card__block_item {
+        width: 330px;
+        
+        &:nth-child(2n) {
+            margin-right: 0px !important;
+        }
+        
+        &:nth-child(3n) {
+            margin-right: 30px;
+        }
+    }
+    
+    /* /Car card */
+    
+    /* Sale block */
+    
+    .sale_block {
+        margin-bottom: 100px;
+    }
+    
+    .title__item {
+        &.prev,
+        &.next {
+            width: 50px;
+            height: 50px;
+            border-radius: 7px;
+            background-color: rgba(255, 255, 255, 0.4);
+            font-size: 0px;
+            position: relative;
+            
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+                border-radius: 7px;
+                background-color: rgba(255, 255, 255);
+                outline: none;
+                
+                span {
+                    position: relative;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+            
+            &:hover {
+                button {
+                    transform: scale(0.9);
+                    transition: transform .4s;
+                }
+                
+                span {
+                    &:before {
+                        color: #d00019;
+                    }
+                }
+            }
+        }
+    }
+    
+    .sale_slider__item {
+        flex-direction: column;
+        
+        .img {
+            width: 100%;
+            margin-bottom: 25px;
+            text-align: center;
+            
+            img {
+                width: 470px;
+                object-fit: contain;
+            }
+        }
+        
+        .inforamtion {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+    
+    /* /Sale block */
+    
+    /* Style body */
+    
+    .style_body__list {
+        margin-bottom: 120px;
+    }
+    
+    .style_body__item {
+        width: 330px;
+    }
+    
+    /* /Style body */
+    
+    /* Call back */
+    
+    .call_back__form {
+        flex-direction: column;
+        
+        .wrapper {
+            .main_input {
+                width: 330px;
+            }
+            
+            .call_back__info {
+                width: 100%;
+            }
+        }
+        
+        .contact_politics {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 30px;
+            
+            label {
+                width: 280px;
+            }
+            
+            .main_button {
+                max-width: 330px;
+            }
+        }
+    }
+    
+    .seo_block {
+        margin-top: 100px;
+    }
+}
+
+
+@media (max-width: 720px) {
+    /* Main slider */
+    .main__slider {
+        margin-bottom: 45px;
+        
+        .slider__arrow {
+            top: initial;
+            bottom: 20px;
+            transform: translateY(0px);
+        }
+    }
+    
+    .slider__caption {
+        font-size: 24px;
+        line-height: 45px;
+        margin-left: 15px;
+        max-width: 315px;
+        
+        span {
+            box-shadow: -15px 0 0 rgba(255, 255, 255, 0.5), 15px 0 0 rgba(255, 255, 255, 0.5);
+        }
+    }
+    
+    .slider__dots__list {
+        bottom: 30px;
+    }
+    
+    /* /Main slider */
+    
+    /* Main form */
+    
+    .select__radio_wrapper {
+        > div {
+            display: flex;
+            flex-direction: column;
+            
+            &:last-child {}
+        }
+    }
+    
+    .main__form {
+        .search__input {
+            .main_input {
+                width: 330px;
+            }
+        }
+        
+        .select__drop_list {
+            margin-top: 20px;
+            
+            .main_input {
+                width: 330px;
+            }
+            
+            .drop_list {
+                left: -12px;
+            }
+        }
+        
+        .main_button {
+            max-width: 330px;
+        }
+    }
+    
+    .select__radio {
+        width: 100%;
+    }
+    
+    .search__auto__wrapper {
+        padding-bottom: 75px;
+    }
+    
+    /* /Main form */
+    
+    /* Car card */
+    
+    .card__block {
+        .arrow__wrapper {
+            margin: 20px auto;
+            display: flex;
+        }
+    }
+    
+    .card__block_list {
+        height: 465px;
+        overflow: hidden;
+    }
+    
+    .card__block_item {
+        width: 330px;
+        margin-right: 0px;
+        
+        &:nth-child(3n) {
+            margin-right: 0px;
+        }
+    }
+    
+    /* /Car card */
+    
+    /* Sale block */
+    
+    .sale_block {
+        margin-bottom: 70px;
+    }
+    
+    .title__item {
+        &.main {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    
+    .sale_slider__item {
+        .img {
+            img {
+                width: 330px;
+            }
+        }
+    }
+    
+    /* /Sale block */
+    
+    /* Style body */
+    
+    .style_body__list {
+        margin-bottom: 80px;
+    }
+    
+    .style_body__item {
+        width: 150px;
+        height: 115px;
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    /* /Style body */
+    
+    /* Call back */
+    
+    .call_back__block {
+        height: 730px;
+    }
+    
+    .call_back__title {
+        h3 {
+            font-size: 32px;
+            line-height: 40px;
+        }
+    }
+    
+    .call_back__form {
+        margin-top: 30px;
+        
+        .wrapper {
+            flex-direction: column;
+        }
+        
+        .call_back__info {
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        
+        .contact_politics {
+            margin-top: 20px;
+            flex-direction: column;
+        }
+    }
+    
+    /* /Call back */
+    
+    .seo_block {
+        margin-top: 70px;
+        
+        p {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    /* Search */
+    
+    .select__radio_wrapper {
+        .search__input {
+            margin-left: 60px;
+        }
+    }
+    
+    .search__input  {
+        .main_input {
+            width: 430px;
+        }
+    }
+    
+    .select__drop_list {
+        .main_input {
+            width: 330px;
+        }
+    }
+    
+    .select__radio {
+        label {
+            margin-right: 40px;
+        }
+    }
+    
+    /* /Search */
+    
+    /* Card block */
+    
+    .sort__wrapper {
+        flex-direction: column;
+        
+        .sort__block {
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        
+        .sort__block_number {
+            .select__drop_list {
+                .drop_list {
+                    left: -40px;
+                }
+            }
+        }
+        
+        .select__drop_list.active {
+            .sort_icon {
+                transform: translateY(5px) translateX(0px) rotate(135deg)
+            }
+        }
+    }
+    
+    /* /Card block */
+    
+    /* Offers */
+    
+    .offers__block {
+        margin-top: 100px;
+    }
+    
+    .offers__block_wrapper {
+        position: relative;
+        z-index: 1;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        
+        .offers__img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .offer__item {
+            width: 330px;
+            
+            p {
+                width: 280px;
+            }
+        }
+    }
+    
+    /* /Offers */
+    
+    /* Credit block */
+    
+    .credit__block {
+        padding: 70px 0 100px;
+    }
+    
+    .form__aplication {
+        width: 330px;
+    }
+    
+    .credit__block_info {
+        width: 265px;
+        margin-left: 30px;
+        
+        p {
+            width: 100%;
+        }
+        
+        .info__list {
+            margin-bottom: 5px;
+        }
+        
+        .info__item {
+            line-height: 28px;
+        }
+    }
+    
+    .form__aplication {
+        .main_button {
+            max-width: 330px;
+        }
+    } 
+    
+    /* /Credit block */
+}
+
+@media (max-width: 720px) {
+    .search__auto {
+        .filter_mobile {
+            display: block;
+            position: fixed;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 7px;
+                background-color: #343434;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    
+    .select_interactive {
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        overflow: auto;
+        background-color: #f7f7f7;
+        margin: 0px;
+        
+        
+        .close_mobile {
+            padding: 5px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+    }
+    
+    .search__auto__wrapper {
+        max-width: 360px;
+        margin: 0 auto;
+        padding: 20px 15px 20px;
+        margin-top: 0px;
+        
+        h4 {
+            display: block;
+            color: #555555;
+            font-family: "Ubuntu", sans-serif;
+            text-transform: uppercase;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .select__radio_wrapper {
+        flex-direction: column;
+        
+        .search__input {
+            margin-left: 0px;
+        }
+    }
+    
+    .select__radio {
+        label {
+            display: inline-block;
+            margin-right: 0px;
+        }
+    }
+}

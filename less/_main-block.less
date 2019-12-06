@@ -107,7 +107,6 @@
                 transform: scale(0.8) rotate(-90deg);
             }
         }
-        
     }
 }
 
@@ -131,7 +130,7 @@
     height: 7px;
     margin-right: 10px;
     cursor: pointer;
-    transition: backgroun-color .4s width .4s;
+    transition: backgroun-color .4s, width .4s;
     
     &:last-child {
         margin-right: 0px;
@@ -176,25 +175,40 @@
             }
         }
     }
+    .filter_mobile {
+        display: none;
+    }
 }
 
 .search__auto__wrapper {
-    margin-top: 35px;
+    margin-top: 15px;
     padding-bottom: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+    
+    > div {
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+    
+    h4 {
+        display: none;
+    }
+    
+    .close_mobile,
+    .mobile_button {
+        display: none;
+    }
 }
 
 .select__radio_wrapper {
     color: #302f22;
+    display: flex;
+    align-items: flex-end;
     
-    > div {
-        display: flex;
-        align-items: flex-end;
-        margin-bottom: 20px;
-        justify-content: space-between;
-        
-        &:last-child {
-            margin-bottom: 0px;
-        }
+    .search__input {
+        margin-left: 55px;
     }
 }
 
@@ -320,6 +334,10 @@
     
     .main_button {
         width: 350px;
+        
+        &.mobile {
+            display: none;
+        }
     }
 }
 
@@ -336,6 +354,7 @@
     .drop_input {
         position: relative;
         transition: z-index .4s;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
     }
     
     span {
@@ -442,6 +461,10 @@
 
 .card__block {
     margin-bottom: 15px;
+    
+    .arrow__wrapper {
+        display: none;
+    }
 }
 
 .card__block_list {
@@ -791,6 +814,11 @@
         font-weight: 800;
     }
     
+    button {
+        border: none;
+        background: none;
+        font: inherit;
+    }
     span {
         position: absolute;
         left: -10px;
@@ -914,6 +942,7 @@
         text-decoration: underline;
         transition: color .4s;
         font-size: 16px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
         
         &:hover {
             color: #d00019;
@@ -1035,12 +1064,12 @@
         resize: none;
     }
     
-    div {
-        margin-right: 30px;
-        height: 120px;
+    .wrapper {
+        display: flex;
         
-        &:last-child {
-            margin-right: 0px;
+         div {
+            margin-right: 30px;
+            height: 120px;
         }
     }
 }
@@ -1209,7 +1238,69 @@
             }
         }
     }
-    
+     &.freight {
+        .offer__item {
+
+            p {
+                width: 180px;
+            }
+
+            span {
+                width: 45px;
+                background: url(../img/freight-offers-img-1.svg) no-repeat center;
+            }
+            &:nth-child(2) {
+                span {
+                    background: url(../img/taxi-offers-img-2.svg) no-repeat center;
+                }
+            }
+            
+            &:nth-child(3) {
+                span {
+                    background: url(../img/freight-offers-img-3.svg) no-repeat center;
+                }
+            }
+            &:nth-child(4) {
+                margin-bottom: 0px;
+                
+                span {
+                    background: url(../img/freight-offers-img-4.svg) no-repeat center;
+                }
+            }
+        }
+
+        .offer__list {
+            &:last-child {
+                .offer__item {
+                    &:nth-child(1) {
+                        span {
+                            background: url(../img/taxi-offers-img-5.svg) no-repeat center;
+                        }
+                    }
+                    
+                    &:nth-child(2) {
+                        span {
+                            background: url(../img/freight-offers-img-6.svg) no-repeat center;
+                        }
+                    }
+                    
+                    &:nth-child(3) {
+                        span {
+                            background: url(../img/freight-offers-img-7.svg) no-repeat center;
+                        }
+                    }
+                    
+                    &:nth-child(4) {
+                        margin-bottom: 0px;
+                        
+                        span {
+                            background: url(../img/freight-offers-img-8.svg) no-repeat center;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .offers__img {
         width: 520px;
         height: 350px;
@@ -2608,39 +2699,41 @@
     margin: 40px 0px;
 }
 
-.contact__item {
-    display: flex;
-    align-items: center;
-    margin-right: 90px;
-    
-    &:last-child {
-        margin-right: 0px;
-    }
-    
-    .icon {
+.contact {
+    .contact__item {
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        background-color: rgb(235, 235, 235);
-        margin-right: 15px;
+        margin-right: 90px;
         
-        &::before {
-            font-size: 25px;
-        }
-    }
-    
-    .info {
-        font-size: 14px;
-        span {
-            color: #8d8d8d
+        &:last-child {
+            margin-right: 0px;
         }
         
-        p {
-            font-size: 16px;
-            color: #292929;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: rgb(235, 235, 235);
+            margin-right: 15px;
+            
+            &::before {
+                font-size: 25px;
+            }
+        }
+        
+        .info {
+            font-size: 14px;
+            span {
+                color: #8d8d8d
+            }
+            
+            p {
+                font-size: 16px;
+                color: #292929;
+            }
         }
     }
 }
