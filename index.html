@@ -1069,59 +1069,52 @@
             <div class="search__auto__wrapper">
                 <form action="#" class="main__form">
                     <div class="select__radio_wrapper">
-                        <div>
-                            <div class="select__radio">
-                                <p class="select__title">Поиск по:</p>
-                                <label>
-                                    <input type="radio" name='search_by' checked>
-                                    <span class="custome_radio"></span>
-                                    <span class="type">Марке</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name='search_by'>
-                                    <span class="custome_radio"></span>
-                                    <span  class="type">Модели</span>
-                                </label>
-                            </div>
-                            <div class="search__input">
-                                <input type="text" placeholder="Введите марку" class="main_input">
-                                <span class="icon-search"></span>
-                            </div>
+                        <div class="select__radio">
+                            <p class="select__title">Поиск по:</p>
+                            <label>
+                                <input type="radio" name='search_by' checked>
+                                <span class="custome_radio"></span>
+                                <span class="type">Марке</span>
+                            </label>
+                            <label>
+                                <input type="radio" name='search_by'>
+                                <span class="custome_radio"></span>
+                                <span  class="type">Модели</span>
+                            </label>
                         </div>
-                        <div>
-                            <div class="select__radio">
-                                <p class="select__title">Кузов:</p>
-                                <label>
-                                    <input type="radio" name='car-body' checked>
-                                    <span class="custome_radio"></span>
-                                    <span class="type">Все авто</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name='car-body'>
-                                    <span class="custome_radio"></span>
-                                    <span class="type">Только внедорожники</span>
-                                </label>
-                            </div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Ценовой диапазон:</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                            <button class="main_button">
-                                <span>показать результат</span>
-                            </button>
+                        <div class="search__input">
+                            <input type="text" placeholder="Введите марку" class="main_input">
+                            <span class="icon-search"></span>
                         </div>
                     </div>
-                    <button class="main_button mobile">
+                    <div class="select__radio">
+                        <p class="select__title">Кузов:</p>
+                        <label>
+                            <input type="radio" name='car-body' checked>
+                            <span class="custome_radio"></span>
+                            <span class="type">Все авто</span>
+                        </label>
+                        <label>
+                            <input type="radio" name='car-body'>
+                            <span class="custome_radio"></span>
+                            <span class="type">Только внедорожники</span>
+                        </label>
+                    </div>
+                    <div class="select__drop_list">
+                        <p class="select__title">Ценовой диапазон:</p>
+                        <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                            <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                            <span class="icon-arrow-search"></span> 
+                        </div>
+                        <ul class="drop_list">
+                            <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                            <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                            <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                            <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                            <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                        </ul>
+                    </div>
+                    <button class="main_button">
                         <span>показать результат</span>
                     </button>
                 </form>

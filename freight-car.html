@@ -238,7 +238,7 @@
             </div>
         </div>
     </header>
-    <main class="collaboration">
+    <main class="collaboration select">
         <div class="breadcrumbs container">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -319,107 +319,114 @@
                 </ul>
             </div>
         </section>
-        <section class="search__auto container select_interactive fraight__select">
+        <section class="search__auto container select_interactive freight__select">
             <h3 class="main__caption">Грузовой транспорт</h3>
             <div class="search__auto__wrapper">
-                <div>
-                    <div class="select__radio_wrapper">
-                        <div>
-                            <div class="select__radio">
-                                <p class="select__title">Поиск по:</p>
-                                <label>
-                                    <input type="radio" name='search_by' checked>
-                                    <span class="custome_radio"></span>
-                                    <span class="type">Марке</span>
-                                </label>
-                                <label>
-                                    <input type="radio" name='search_by'>
-                                    <span class="custome_radio"></span>
-                                    <span  class="type">Модели</span>
-                                </label>
-                            </div>
-                            <div class="search__input">
-                                <input type="text" placeholder="Введите марку" class="main_input">
-                                <span class="icon-search"></span>
-                            </div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Тип авто</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>900 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Тоннаж</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Коробка передач</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Пробег</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                            <div class="select__drop_list">
-                                <p class="select__title">Ценовой диапазон:</p>
-                                <div onclick="parentNode.classList.toggle('active')" class="drop_input">
-                                    <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
-                                    <span class="icon-arrow-search"></span> 
-                                </div>
-                                <ul class="drop_list">
-                                    <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
-                                    <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
-                                    <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
-                                </ul>
-                            </div>
-                        </div>
+                <h4>фильтры</h4>
+                <div class="select__radio_wrapper">
+                    <div class="select__radio">
+                        <p class="select__title">Поиск по:</p>
+                        <label>
+                            <input type="radio" name='search_by' checked>
+                            <span class="custome_radio"></span>
+                            <span class="type">Марке</span>
+                        </label>
+                        <label>
+                            <input type="radio" name='search_by'>
+                            <span class="custome_radio"></span>
+                            <span  class="type">Модели</span>
+                        </label>
                     </div>
+                    <div class="search__input">
+                        <input type="text" placeholder="Введите марку" class="main_input">
+                        <span class="icon-search"></span>
+                    </div>
+                </div>
+                <div class="select__drop_list">
+                    <p class="select__title">Тип авто</p>
+                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                        <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                        <span class="icon-arrow-search"></span> 
+                    </div>
+                    <ul class="drop_list">
+                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>900 000 - 1 000 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                    </ul>
+                </div>
+                <div class="select__drop_list">
+                    <p class="select__title">Тоннаж</p>
+                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                        <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                        <span class="icon-arrow-search"></span> 
+                    </div>
+                    <ul class="drop_list">
+                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                    </ul>
+                </div>
+                <div class="select__drop_list">
+                    <p class="select__title">Коробка передач</p>
+                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                        <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                        <span class="icon-arrow-search"></span> 
+                    </div>
+                    <ul class="drop_list">
+                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                    </ul>
+                </div>
+                <div class="select__drop_list">
+                    <p class="select__title">Пробег</p>
+                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                        <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                        <span class="icon-arrow-search"></span> 
+                    </div>
+                    <ul class="drop_list">
+                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                    </ul>
+                </div>
+                <div class="select__drop_list">
+                    <p class="select__title">Ценовой диапазон:</p>
+                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                        <input type="text" class="main_input" readonly value="800 000 - 1 000 000 руб">
+                        <span class="icon-arrow-search"></span> 
+                    </div>
+                    <ul class="drop_list">
+                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                    </ul>
+                </div>
+                <span class="icon-close close_mobile" onclick="parentNode.parentNode.classList.remove('active')"></span>
+                <div class="mobile_button">
+                    <button class="main_button">
+                        <span>применить фильтр</span>
+                    </button>
                 </div>
             </div>
         </section>
+        <div class="filter_mobile">
+            <button>
+                <span class="icon-filter"></span>
+            </button>
+        </div>
         <section class="card__block container">
+            <h3 class="main__caption">Грузовой транспорт</h3>
             <div class="sort__wrapper">
                 <p class="founds_car">Найдено 35 автомобилей</p>
                 <div class="sort__block">
@@ -694,6 +701,7 @@
             </div>
         </section>
         <section class="credit__block">
+            <img src="./img/credit-block-bg.png" alt="Кредит">
             <h3 class="main__caption container">Кредитование</h3>
             <div class="credit__block__wrapper container">
                 <form action="#" class="form__aplication">

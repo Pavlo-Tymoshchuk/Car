@@ -328,6 +328,20 @@
                 </div>
             </div>
             <div class="main_car__info">
+                <div class="select__drop_list color">
+                    <p class="select__title">Цвет</p>
+                    <div onclick="parentNode.classList.toggle('active')" class="drop_input">
+                        <input type="text" class="main_input" readonly value="Зеленый">
+                        <span class="icon-arrow-search"></span> 
+                    </div>
+                    <ul class="drop_list">
+                        <li class="drop_item active"><span class="icon-active"></span>до 300 000 руб</li>
+                        <li class="drop_item "><span class="icon-active"></span>300 000 - 500 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>500 000 - 800 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>800 000 - 1 000 000 руб</li>
+                        <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
+                    </ul>
+                </div>
                 <div class="select__drop_list">
                     <p class="select__title">Комплектация</p>
                     <div onclick="parentNode.classList.toggle('active')" class="drop_input">
@@ -379,38 +393,40 @@
                 <ul class="equipment_block__list">
                     <li class="quipment_block__item">
                         <span class="icon-arrow-search open_drop" onclick="parentNode.classList.toggle('active')"></span>
-                        <div class="name_wrapper">
-                            <h6 class="name">Start</h6>
-                            <p class="price">
-                                от 789 000
-                                <span class="icon-ruble"></span>
-                            </p>
-                        </div>
-                        <ul class="characteristics__list">
-                            <li class="characteristics__item">
-                                <p class="type">Максимальная скорость</p>
-                                <p class="description">169 км/ч.</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Топливо</p>
-                                <p class="description">бензин</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Привод</p>
-                                <p class="description">передний</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Смешанный расход</p>
-                                <p class="description">7,0 л/100км</p>
-                            </li>
-                        </ul>
-                        <div class="button__wrapper">
-                            <button class="equipment_button reserve">
-                                <span>забронировать</span>
-                            </button>
-                            <a href="#" class="equipment_button credit">
-                                <span>в кредит</span>
-                            </a>
+                        <div class="wrapper">
+                            <div class="name_wrapper">
+                                <h6 class="name">Start</h6>
+                                <p class="price">
+                                    от 789 000
+                                    <span class="icon-ruble"></span>
+                                </p>
+                            </div>
+                            <ul class="characteristics__list">
+                                <li class="characteristics__item">
+                                    <p class="type">Максимальная скорость</p>
+                                    <p class="description">169 км/ч.</p>
+                                </li>
+                                <li class="characteristics__item">
+                                    <p class="type">Топливо</p>
+                                    <p class="description">бензин</p>
+                                </li>
+                                <li class="characteristics__item">
+                                    <p class="type">Привод</p>
+                                    <p class="description">передний</p>
+                                </li>
+                                <li class="characteristics__item">
+                                    <p class="type">Смешанный расход</p>
+                                    <p class="description">7,0 л/100км</p>
+                                </li>
+                            </ul>
+                            <div class="button__wrapper">
+                                <button class="equipment_button reserve">
+                                    <span>забронировать</span>
+                                </button>
+                                <a href="#" class="equipment_button credit">
+                                    <span>в кредит</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="drop__info">
                             <ul class="drop__info__list">
@@ -597,40 +613,42 @@
                             </ul>
                         </div>
                     </li>
-                     <li class="quipment_block__item">
+                    <li class="quipment_block__item">
                         <span class="icon-arrow-search open_drop" onclick="parentNode.classList.toggle('active')"></span>
-                        <div class="name_wrapper">
-                            <h6 class="name">Start</h6>
-                            <p class="price">
-                                от 789 000
-                                <span class="icon-ruble"></span>
-                            </p>
-                        </div>
-                        <ul class="characteristics__list">
-                            <li class="characteristics__item">
-                                <p class="type">Максимальная скорость</p>
-                                <p class="description">169 км/ч.</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Топливо</p>
-                                <p class="description">бензин</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Привод</p>
-                                <p class="description">передний</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Смешанный расход</p>
-                                <p class="description">7,0 л/100км</p>
-                            </li>
-                        </ul>
-                        <div class="button__wrapper">
-                            <button class="equipment_button reserve">
-                                <span>забронировать</span>
-                            </button>
-                            <a href="#" class="equipment_button credit">
-                                <span>в кредит</span>
-                            </a>
+                        <div class="wrapper">
+                            <div class="name_wrapper">
+                                <h6 class="name">Start</h6>
+                                <p class="price">
+                                    от 789 000
+                                    <span class="icon-ruble"></span>
+                                </p>
+                            </div>
+                            <ul class="characteristics__list">
+                                <li class="characteristics__item">
+                                    <p class="type">Максимальная скорость</p>
+                                    <p class="description">169 км/ч.</p>
+                                </li>
+                                <li class="characteristics__item">
+                                    <p class="type">Топливо</p>
+                                    <p class="description">бензин</p>
+                                </li>
+                                <li class="characteristics__item">
+                                    <p class="type">Привод</p>
+                                    <p class="description">передний</p>
+                                </li>
+                                <li class="characteristics__item">
+                                    <p class="type">Смешанный расход</p>
+                                    <p class="description">7,0 л/100км</p>
+                                </li>
+                            </ul>
+                            <div class="button__wrapper">
+                                <button class="equipment_button reserve">
+                                    <span>забронировать</span>
+                                </button>
+                                <a href="#" class="equipment_button credit">
+                                    <span>в кредит</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="drop__info">
                             <ul class="drop__info__list">
@@ -822,260 +840,42 @@
             <div class="equipment_block__wrapper">
                 <h5 class="equipment_block_title">Двигатель 1,6 л., КП - механика 6 ст.</h5>
                 <ul class="equipment_block__list">
-                    <li class="quipment_block__item">
+                <li class="quipment_block__item">
                         <span class="icon-arrow-search open_drop" onclick="parentNode.classList.toggle('active')"></span>
-                        <div class="name_wrapper">
-                            <h6 class="name">Start</h6>
-                            <p class="price">
-                                от 789 000
-                                <span class="icon-ruble"></span>
-                            </p>
-                        </div>
-                        <ul class="characteristics__list">
-                            <li class="characteristics__item">
-                                <p class="type">Максимальная скорость</p>
-                                <p class="description">169 км/ч.</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Топливо</p>
-                                <p class="description">бензин</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Привод</p>
-                                <p class="description">передний</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Смешанный расход</p>
-                                <p class="description">7,0 л/100км</p>
-                            </li>
-                        </ul>
-                        <div class="button__wrapper">
-                            <button class="equipment_button reserve">
-                                <span>забронировать</span>
-                            </button>
-                            <a href="#" class="equipment_button credit">
-                                <span>в кредит</span>
-                            </a>
-                        </div>
-                        <div class="drop__info">
-                            <ul class="drop__info__list">
-                                <li class="drop__info_item">
-                                    <h5 class="caption">Технические характеристики</h5>
-                                    <ul class="full__list">
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                    </ul>
+                        <div class="wrapper">
+                            <div class="name_wrapper">
+                                <h6 class="name">Start</h6>
+                                <p class="price">
+                                    от 789 000
+                                    <span class="icon-ruble"></span>
+                                </p>
+                            </div>
+                            <ul class="characteristics__list">
+                                <li class="characteristics__item">
+                                    <p class="type">Максимальная скорость</p>
+                                    <p class="description">169 км/ч.</p>
                                 </li>
-                                <li class="drop__info_item">
-                                    <h5 class="caption">Экстеръер</h5>
-                                    <ul class="full__list">
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                    </ul>
+                                <li class="characteristics__item">
+                                    <p class="type">Топливо</p>
+                                    <p class="description">бензин</p>
                                 </li>
-                                <li class="drop__info_item">
-                                    <h5 class="caption">Интеръер</h5>
-                                    <ul class="full__list">
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                    </ul>
+                                <li class="characteristics__item">
+                                    <p class="type">Привод</p>
+                                    <p class="description">передний</p>
                                 </li>
-                                <li class="drop__info_item">
-                                    <h5 class="caption">Безопасность</h5>
-                                    <ul class="full__list">
-                                        <li class="full__item">
-                                            <p class="type">Задняя подвеска</p>
-                                            <p class="description">полузависимая торсионная балка</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Система (ESP)</p>
-                                            <p class="description">есть</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Подушка безопасности переднего пассажира</p>
-                                            <p class="description">есть</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">ЭРА-ГЛОНАСС</p>
-                                            <p class="description">есть</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Система распределения тормозного усилия (EBD)</p>
-                                            <p class="description">есть</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                        <li class="full__item">
-                                            <p class="type">Габариты</p>
-                                            <p class="description">4270 х 1780 х 1630 мм</p>
-                                        </li>
-                                    </ul>
+                                <li class="characteristics__item">
+                                    <p class="type">Смешанный расход</p>
+                                    <p class="description">7,0 л/100км</p>
                                 </li>
                             </ul>
-                        </div>
-                    </li>
-                     <li class="quipment_block__item">
-                        <span class="icon-arrow-search open_drop" onclick="parentNode.classList.toggle('active')"></span>
-                        <div class="name_wrapper">
-                            <h6 class="name">Start</h6>
-                            <p class="price">
-                                от 789 000
-                                <span class="icon-ruble"></span>
-                            </p>
-                        </div>
-                        <ul class="characteristics__list">
-                            <li class="characteristics__item">
-                                <p class="type">Максимальная скорость</p>
-                                <p class="description">169 км/ч.</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Топливо</p>
-                                <p class="description">бензин</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Привод</p>
-                                <p class="description">передний</p>
-                            </li>
-                            <li class="characteristics__item">
-                                <p class="type">Смешанный расход</p>
-                                <p class="description">7,0 л/100км</p>
-                            </li>
-                        </ul>
-                        <div class="button__wrapper">
-                            <button class="equipment_button reserve">
-                                <span>забронировать</span>
-                            </button>
-                            <a href="#" class="equipment_button credit">
-                                <span>в кредит</span>
-                            </a>
+                            <div class="button__wrapper">
+                                <button class="equipment_button reserve">
+                                    <span>забронировать</span>
+                                </button>
+                                <a href="#" class="equipment_button credit">
+                                    <span>в кредит</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="drop__info">
                             <ul class="drop__info__list">
@@ -1833,7 +1633,7 @@
             </div>
         </div>
     </footer>
-    <section class="popup popup_reservation">
+    <!-- <section class="popup popup_reservation">
         <span class="icon-close close_popup"></span>
         <h5 class="caption">забронировать</h5>
         <div class="info_block">
@@ -1872,7 +1672,7 @@
                 </div>
             </form>
         </div>
-    </section>
+    </section> -->
     <!-- <section class="popup popup_review">
     <span class="icon-close close_popup"></span>
         <div class="reviews__item">

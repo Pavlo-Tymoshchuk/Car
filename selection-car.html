@@ -63,7 +63,7 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="select">
         <div class="breadcrumbs container">
             <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -74,8 +74,8 @@
                 </li>
             </ul>
         </div>
-        <h3 class="main__caption container">Подбор авто</h3>
         <section class="search__auto container select_interactive">
+            <h3 class="main__caption">Подбор авто</h3>
             <div class="search__auto__wrapper">
                 <h4>фильтры</h4>
                 <div class="select__radio_wrapper">
@@ -153,20 +153,21 @@
                         <li class="drop_item"><span class="icon-active"></span>свыше 1 000 000 руб</li>
                     </ul>
                 </div>
-                <span class="icon-close close_mobile"></span>
+                <span class="icon-close close_mobile" onclick="parentNode.parentNode.classList.remove('active')"></span>
                 <div class="mobile_button">
                     <button class="main_button">
                         <span>применить фильтр</span>
                     </button>
                 </div>
             </div>
-            <div class="filter_mobile">
-                <button>
-                    <span class="icon-filter"></span>
-                </button>
-            </div>
         </section>
+        <div class="filter_mobile" onclick="parentNode.classList.add('active')">
+            <button>
+                <span class="icon-filter"></span>
+            </button>
+        </div>
         <section class="card__block container">
+            <h3 class="main__caption">Подбор авто</h3>
             <div class="sort__wrapper">
                 <p class="founds_car">Найдено 35 автомобилей</p>
                 <div class="sort__block">
@@ -483,6 +484,7 @@
         </section>
         <section class="credit__block">
             <h3 class="main__caption container">Кредитование</h3>
+            <img src="./img/credit-block-bg.png" alt="Кредит">
             <div class="credit__block__wrapper container">
                 <form action="#" class="form__aplication">
                     <h3 class="credit__form_title">Заявка</h3>
